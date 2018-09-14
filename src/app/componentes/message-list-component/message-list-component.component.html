@@ -1,0 +1,8 @@
+
+<h1> 
+    <h5>Sala: {{_chatService.salaActual.name}}</h5>
+</h1>
+<br><br>
+<div >
+    <p *ngFor="let mensaje of _chatService.salaActual.messages">{{mensaje.username}} dice: {{mensaje.text}}</p>
+</div>

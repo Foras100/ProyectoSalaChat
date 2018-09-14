@@ -1,0 +1,18 @@
+<div style="align-items: center">
+    <h1>ParanaChat</h1>
+</div>
+<div class="sala">
+  <div class="sala2">
+      <h4 *ngFor="let sala of _chatService.salas" (click)="_chatService.salaActual=sala">
+      {{sala.name}}
+      </h4>
+  </div>
+  <div class="sala2" *ngIf="_chatService.salaActual">
+    <div class="sala3">
+        <app-message-list-component></app-message-list-component>  
+    </div>
+    <div style="margin:20px">
+        <app-message-form></app-message-form> 
+    </div>
+  </div>
+</div>
